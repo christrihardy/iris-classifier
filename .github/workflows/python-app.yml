@@ -53,7 +53,7 @@ jobs:
         API_SERVICE_IMAGE: backend
         STREAMLIT_SERVICE_IMAGE: frontend
 
-      run:
+      run: |
         ssh deploy_ec2 "mkdir temp"
         ssh deploy_ec2 "git clone https://github.com/christrihardy/iris-classifier.git temp"
         ssh deploy_ec2 "rsync -a temp/ $PATH_FILE"
