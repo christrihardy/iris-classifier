@@ -43,7 +43,7 @@ jobs:
           Host deploy_ec2
             HostName $SSH_HOST
             User $SSH_USER
-            IdentifyFile ~/.ssh/deployment.pem
+            IdentityFile ~/.ssh/deployment.pem
             StrictHostKeyChecking no
           END
 
